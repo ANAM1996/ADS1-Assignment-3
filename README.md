@@ -31,3 +31,9 @@ plt.ylabel("Heath Expenditure")
 plt.legend(loc='best')
 plt.grid()
 plt.show()
+"function for data normalization for the best fit"
+def normal(data):
+    minmax=MinMaxScaler()
+    nrm=minmax.fit_transform(data)
+    return nrm
+nrml=normal(df1.values)
