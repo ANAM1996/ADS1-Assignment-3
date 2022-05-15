@@ -16,3 +16,6 @@ plt.ylabel("Population Density")
 plt.legend(loc='best')
 plt.grid()
 plt.show()
+df2 = wb.data.DataFrame(ind2, country_codes, mrv=60).T
+df2 = df2.fillna(df2.mean())
+df2.head()
